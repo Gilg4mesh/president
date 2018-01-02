@@ -56,3 +56,7 @@ while(url != "https://zh.wikisource.orgNA") {
 rm(temp, css.president, css.speech, doc, node.president, node.speech, president, session, speech, url)
 
 write.csv( final, file="final.csv" )
+final <- read.csv("final.csv")
+
+save(final, file="final.RData")
+load("final.RData")
